@@ -1,0 +1,23 @@
+#ifndef _C_IIC_MASTER_H_
+#define _C_IIC_MASTER_H_
+
+	#error You have included the example c_iic_master.h.
+
+	#define IIC_PORT_SYNC() ;
+	//#define IIC_PORT_SYNC() Nop();Nop();Nop();Nop()
+
+	#define IIC_MAL_CONFIG()	CNPUEbits.CNPUE15 = 1;\
+								CNPUEbits.CNPUE16 = 1;
+
+	#define IIC_TASK_CNT 1
+
+	#define IIC_SCL_PORT	PORTDbits.RD4
+	#define IIC_SCL_TRIS	TRISDbits.TRISD4
+	#define IIC_SCL_LAT		LATDbits.LATD4
+
+	#define IIC_SDA_PORT	PORTDbits.RD5
+	#define IIC_SDA_TRIS	TRISDbits.TRISD5
+	#define IIC_SDA_LAT		LATDbits.LATD5
+
+
+#endif
